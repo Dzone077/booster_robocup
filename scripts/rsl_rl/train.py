@@ -141,7 +141,7 @@ from isaaclab.envs import (  # noqa: E402
     multi_agent_to_single_agent,
 )
 from isaaclab.utils.dict import print_dict  # noqa: E402
-from isaaclab.utils.io import dump_pickle, dump_yaml  # noqa: E402
+from isaaclab.utils.io import dump_yaml  # noqa: E402
 
 from isaaclab_rl.rsl_rl import RslRlOnPolicyRunnerCfg, RslRlVecEnvWrapper  # noqa: E402
 
@@ -267,8 +267,6 @@ def main(
     # dump the configuration into log-directory
     dump_yaml(os.path.join(log_dir, "params", "env.yaml"), env_cfg)
     dump_yaml(os.path.join(log_dir, "params", "agent.yaml"), agent_cfg)
-    dump_pickle(os.path.join(log_dir, "params", "env.pkl"), env_cfg)
-    dump_pickle(os.path.join(log_dir, "params", "agent.pkl"), agent_cfg)
 
     # run training
     runner.learn(

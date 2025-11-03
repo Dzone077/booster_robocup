@@ -14,8 +14,7 @@ class T1BaselinePPORunnerCfg(RslRlOnPolicyRunnerCfg):
     experiment_name = "t1_baseline"
     empirical_normalization = False
     store_code_state = False
-    logger = "wandb"
-    wandb_project = "T1_Baseline"
+    # logger = "wandb"
     policy = RslRlPpoActorCriticCfg(
         init_noise_std=1.0,
         actor_hidden_dims=[512, 256, 128],
